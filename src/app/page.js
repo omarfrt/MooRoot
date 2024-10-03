@@ -3,6 +3,8 @@ import Image from "next/image";
 import Styled from "styled-components";
 import moorootSvg from "./mooroot.svg";
 import studioSvg from "./studio.svg";
+import Experience from "./R3F/Sphere/Experience";
+
 const PageWrapper = Styled.div`
   display: flex;
   flex-direction: column;
@@ -126,8 +128,10 @@ export default function Home() {
           <TextComponent>MooRoot.com -?</TextComponent>
         </Column>
       </ColumnContainer>
+      <div style={{ width: '100%', height: '50vh' }}>
+        <Experience />
+      </div>
       </MainContent>
-      <div>{/* Empty div for future content */}</div>
       
       <FooterContainer>
         <FooterColumn>
