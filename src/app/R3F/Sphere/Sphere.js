@@ -1,5 +1,5 @@
 
-import { extend, useFrame } from "@react-three/fiber";
+import {  useFrame } from "@react-three/fiber";
 import * as THREE from 'three'
 import React, { Suspense } from 'react'
 import {mergeVertices} from 'three/addons/utils/BufferGeometryUtils.js'
@@ -21,22 +21,6 @@ const uniforms = {
   uColorA: { value: new THREE.Color('#0000ff') },
   uColorB: { value: new THREE.Color('#ff0000') },
 }
-// const sphereMaterial = new CustomShaderMaterial({
-//   //cms
-//   baseMaterial: THREE.MeshPhysicalMaterial,
-//   vertexShader: ``,
-//   fragmentShader: ``,
-//   uniforms: uniforms,
-//   // MeshPhysicalMaterial 
-//   metalness: 0,
-//   roughness: 0.5,
-//   color: '#ffffff',
-//   transmission: 0,
-//   ior: 1.5,
-//   thickness: 1.5,
-//   transparent: true,
-//   wireframe: false
-// })
   
   let geometry = new THREE.IcosahedronGeometry(2.5, 50)
   geometry = mergeVertices(geometry)
