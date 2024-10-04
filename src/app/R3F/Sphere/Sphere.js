@@ -8,8 +8,8 @@ import vertexShader from '../wobblly_sphere/vertex.glsl'
 import fragmentShader from '../wobblly_sphere/fragment.glsl'
 import { useRef } from "react";
 const debugObject = {}
-debugObject.colorA = '#0000ff'
-debugObject.colorB = '#ff0000'
+debugObject.colorA = '#E4620A'
+debugObject.colorB = '#51AF95'
 const uniforms = {
   uTime: { value: 0 },
   uPositionFrequency: { value: 0.5 },
@@ -18,8 +18,8 @@ const uniforms = {
   uWrapPositionFrequency: { value: 0.38 },
   uWrapTimeFrequency: { value: 0.12 },
   uWrapStrength: { value: 1.7 },
-  uColorA: { value: new THREE.Color('#0000ff') },
-  uColorB: { value: new THREE.Color('#ff0000') },
+  uColorA: { value: new THREE.Color('#51AF95') },
+  uColorB: { value: new THREE.Color('#E4620A') },
 }
   
   let geometry = new THREE.IcosahedronGeometry(2.5, 50)

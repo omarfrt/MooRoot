@@ -3,18 +3,22 @@ import Image from "next/image";
 import Styled from "styled-components";
 import moorootSvg from "./mooroot.svg";
 import studioSvg from "./studio.svg";
+import greenTorusSvg from "./green.svg";
+import orangeTorusSvg from "./orange.svg";
 import Experience from "./R3F/Sphere/Experience";
 
 const PageWrapper = Styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  padding: 0 47px 0 47px ;
+ justify-content: space-between;
+  overflow: hidden;
 `;
 
 // Add this new styled component for the main content
-const MainContent = Styled.main`
-  flex: 1;
+const MainContent = Styled.div`
+   padding: 30px 47px 0 47px;
 `;
 
 //LOGO
@@ -30,6 +34,18 @@ const MoorootLogo = Styled(Image)`
 `;
 const StudioLogo = Styled(Image)`
   
+`;
+const GreenTorus = Styled(Image)`
+  position: absolute;
+  bottom: -120px;
+  right: -120px;
+  z-index: 4;
+`;
+const OrangeTorus = Styled(Image)`
+  position: absolute;
+  top: -120px;
+  left: -45px;
+  z-index: 4;
 `;
 //LINE
 const HorizontalLine = Styled.div`
@@ -60,11 +76,12 @@ const TextComponent = Styled.div`
   text-align: left;
 `;
 
-const FooterContainer = Styled.footer`
+const FooterContainer = Styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
-  padding: 20px 0;
+  
+  padding: 0 47px 20px 47px;
 `;
 
 const FooterColumn = Styled.div`
@@ -81,7 +98,10 @@ const FooterLine = Styled.div`
 
 export default function Home() {
   return (
-    <PageWrapper>
+    <>
+      <PageWrapper>
+        <OrangeTorus src={orangeTorusSvg} alt="orange torus" />
+      <GreenTorus src={greenTorusSvg} alt="green torus" />
       <MainContent>
       <LogoContainer>
         <MoorootLogo src={moorootSvg} alt="mooroot" />
@@ -128,11 +148,11 @@ export default function Home() {
           <TextComponent>MooRoot.com -?</TextComponent>
         </Column>
       </ColumnContainer>
+      
+      </MainContent>
       <div style={{ width: '100%', height: '50vh' }}>
         <Experience />
       </div>
-      </MainContent>
-      
       <FooterContainer>
         <FooterColumn>
           <FooterLine />
@@ -155,5 +175,6 @@ export default function Home() {
         </FooterColumn>
       </FooterContainer>
     </PageWrapper>
+    </>
   );  
 }
