@@ -9,9 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@react-three/drei": "^9.114.0",
+    "@react-three/fiber": "8.16",
     "next": "14.2.13",
     "react": "^18",
     "react-dom": "^18",
-    "styled-components": "^6.1.13"
+    "styled-components": "^6.1.13",
+    "three": "^0.166.1",
+    "three-custom-shader-material": "^6.0.10"
+  },
+  "devDependencies": {
+    "raw-loader": "^4.0.2"
   }
 }
