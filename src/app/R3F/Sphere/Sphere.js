@@ -40,8 +40,7 @@ const uniforms = {
   
     return (
       <Suspense fallback={null}>
-        <directionalLight position={[1, 1, 0]} intensity={4.5} />
-        <ambientLight intensity={1} />
+        <ambientLight intensity={2} />
         <mesh ref={meshRef}>
           <icosahedronGeometry args={[2.5, 50]} />
           <CustomShaderMaterial
