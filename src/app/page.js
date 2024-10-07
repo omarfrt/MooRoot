@@ -6,6 +6,7 @@ import studioSvg from "./studio.svg";
 import greenTorusSvg from "./green.svg";
 import orangeTorusSvg from "./orange.svg";
 import Experience from "./R3F/Sphere/Experience";
+import ShuffleType from "./component/TypeShuffle";
 
 const PageWrapper = Styled.div`
   position: relative;
@@ -110,42 +111,42 @@ export default function Home() {
       <HorizontalLine />
       <ColumnContainer>
         <Column>
-          <TextComponent fontWeight="bold" fontSize="40px">Omar Fertat</TextComponent>
+          <TextComponent fontWeight="bold" fontSize="40px"><ShuffleType text={"Omar Fertat"}/></TextComponent>
         </Column>
         <Column>
-          <TextComponent fontWeight="bold">Tangier,</TextComponent>
-          <TextComponent fontWeight="bold">Morocco</TextComponent>
+          <TextComponent fontWeight="bold"><ShuffleType text={"Tangier,"}/></TextComponent>
+          <TextComponent fontWeight="bold"><ShuffleType text={"Morocco"}/></TextComponent>
         </Column>
         <Column >
-          <TextComponent fontWeight="bold">omarfertat.com,</TextComponent>
-          <TextComponent fontWeight="bold">omarfertat96@gmail.com</TextComponent>
+          <TextComponent fontWeight="bold"><ShuffleType text={"omarfertat.com,"}/></TextComponent>
+          <TextComponent fontWeight="bold"><ShuffleType text={"omarfertat96@gmail.com"}/></TextComponent>
         </Column>
       </ColumnContainer>
       <HorizontalLine />
       <ColumnContainer>
         <Column>
-          <TextComponent>Full Stack /</TextComponent>
-          <TextComponent>Creative Developer</TextComponent>
+          <TextComponent><ShuffleType text={"Full Stack /"}/></TextComponent>
+          <TextComponent> <ShuffleType text={"Creative Developer"}/></TextComponent>
         </Column>
         <Column>
-          <TextComponent>ReactJs, NextJs,</TextComponent>
-          <TextComponent>R3F</TextComponent>
+          <TextComponent><ShuffleType text={"ReactJs, NextJs,"}/></TextComponent>
+          <TextComponent><ShuffleType text={"R3F"}/></TextComponent>
         </Column>
         <Column>
-          <TextComponent>NodeJs, Express,</TextComponent>
-          <TextComponent>MongoDB</TextComponent>
+          <TextComponent><ShuffleType text={"NodeJs, Express,"}/></TextComponent>
+          <TextComponent><ShuffleType text={"MongoDB"}/></TextComponent>
         </Column>
       </ColumnContainer>
       <HorizontalLine />
       <ColumnContainer>
         <Column>
-          <TextComponent>MexiqueBookShop.com -2022</TextComponent>
+          <TextComponent><ShuffleType text={"MexiqueBookShop.com -2022"}/></TextComponent>
         </Column>
         <Column>
-          <TextComponent>Homylius.lu -2023</TextComponent>
+          <TextComponent><ShuffleType text={"Homylius.lu -2023"}/></TextComponent>
         </Column>
         <Column>
-          <TextComponent>MooRoot.com -?</TextComponent>
+          <TextComponent><ShuffleType text={"MooRoot.com -?"}/></TextComponent>
         </Column>
       </ColumnContainer>
       
@@ -156,22 +157,22 @@ export default function Home() {
       <FooterContainer>
         <FooterColumn>
           <FooterLine />
-          <TextComponent fontSize="16px">omarfertat.com</TextComponent>
+          <TextComponent fontSize="16px"><ShuffleType text={"omarfertat.com"}/></TextComponent>
         </FooterColumn>
         <FooterColumn>
           <FooterLine />
-          <TextComponent fontSize="16px">demo1.com</TextComponent>
-          <TextComponent fontSize="16px">demo2.com</TextComponent>
+          <TextComponent fontSize="16px"><ShuffleType text={"Demo"}/></TextComponent>
+          <TextComponent fontSize="16px"><ShuffleType text={"Demo"}/></TextComponent>
         </FooterColumn>
         <FooterColumn>
           <FooterLine />
-          <TextComponent fontSize="16px">demo1.com</TextComponent>
-          <TextComponent fontSize="16px">demo2.com</TextComponent>
+          <TextComponent fontSize="16px"><ShuffleType text={"Demo"}/></TextComponent>
+          <TextComponent fontSize="16px"><ShuffleType text={"Demo"}/></TextComponent>
         </FooterColumn>
         <FooterColumn>
           <FooterLine />
-          <TextComponent fontSize="16px">demo1.com</TextComponent>
-          <TextComponent fontSize="16px">demo2.com</TextComponent>
+          <TextComponent fontSize="16px"><ShuffleType text={"Demo"}/></TextComponent>
+          <TextComponent fontSize="16px"><ShuffleType text={"Demo"}/></TextComponent>
         </FooterColumn>
       </FooterContainer>
     </PageWrapper>
