@@ -40,13 +40,19 @@ const GreenTorus = Styled(Image)`
   position: absolute;
   bottom: -120px;
   right: -120px;
-  z-index: 4;
+  z-index: 0;
+  @media (max-width: 1056px){
+    display: none;
+  }
 `;
 const OrangeTorus = Styled(Image)`
   position: absolute;
   top: -120px;
   left: -45px;
-  z-index: 4;
+  z-index: 0;
+  @media (max-width: 1056px){
+    display: none;
+  }
 `;
 //LINE
 const HorizontalLine = Styled.div`
@@ -75,6 +81,7 @@ const TextComponent = Styled.div`
   font-weight: ${props => props.fontWeight || 'medium'};
   font-size: ${props => props.fontSize || '18px'};
   text-align: left;
+  z-index:4
 `;
 
 const FooterContainer = Styled.div`
@@ -111,15 +118,15 @@ export default function Home() {
       <HorizontalLine />
       <ColumnContainer>
         <Column>
-          <TextComponent fontWeight="bold" fontSize="40px"><ShuffleType text={"Omar Fertat"}/></TextComponent>
+          <TextComponent fontWeight="bold" fontSize="40px"><ShuffleType text={"Omar Fertat"} link={"https://www.omarfertat.com/"}/></TextComponent>
         </Column>
         <Column>
           <TextComponent fontWeight="bold"><ShuffleType text={"Tangier,"}/></TextComponent>
           <TextComponent fontWeight="bold"><ShuffleType text={"Morocco"}/></TextComponent>
         </Column>
         <Column >
-          <TextComponent fontWeight="bold"><ShuffleType text={"omarfertat.com,"}/></TextComponent>
-          <TextComponent fontWeight="bold"><ShuffleType text={"omarfertat96@gmail.com"}/></TextComponent>
+          <TextComponent fontWeight="bold"><ShuffleType text={"omarfertat.com,"} link={"https://www.omarfertat.com/"}/></TextComponent>
+          <TextComponent fontWeight="bold"><ShuffleType text={"omarfertat96@gmail.com"} link={"mailto:omarfertat96@gmail.com"}/></TextComponent>
         </Column>
       </ColumnContainer>
       <HorizontalLine />
@@ -140,13 +147,13 @@ export default function Home() {
       <HorizontalLine />
       <ColumnContainer>
         <Column>
-          <TextComponent><ShuffleType text={"MexiqueBookShop.com -2022"}/></TextComponent>
+          <TextComponent><ShuffleType text={"MexiqueBookShop.com -2022"} link={"https://www.mexiquebookshop.com/"}/></TextComponent>
         </Column>
         <Column>
-          <TextComponent><ShuffleType text={"Homylius.lu -2023"}/></TextComponent>
+          <TextComponent><ShuffleType text={"Homylius.lu -2023"} link={"https://www.homylius.lu/"}/></TextComponent>
         </Column>
         <Column>
-          <TextComponent><ShuffleType text={"MooRoot.com -?"}/></TextComponent>
+          <TextComponent><ShuffleType text={"MooRoot.studio -?"}link={"https://www.mooroot.studio/"}/></TextComponent>
         </Column>
       </ColumnContainer>
       
@@ -157,7 +164,7 @@ export default function Home() {
       <FooterContainer>
         <FooterColumn>
           <FooterLine />
-          <TextComponent fontSize="16px"><ShuffleType text={"omarfertat.com"}/></TextComponent>
+          <TextComponent fontSize="16px"><ShuffleType text={"omarfertat.com"}link={"https://www.omarfertat.com/"}/></TextComponent>
         </FooterColumn>
         <FooterColumn>
           <FooterLine />

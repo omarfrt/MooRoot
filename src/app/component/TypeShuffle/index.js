@@ -1,14 +1,20 @@
 "use client"
 import React, { useState, useEffect } from 'react';
 import { gsap } from 'gsap';
+import Styled from 'styled-components';
 
+const TextComponent = Styled.a`
+  text-decoration: none; 
+  color: inherit;
+  cursor: pointer; 
+`;
 function randChar() {
  let c = "abcdefghijklmnopqrstuvwxyz1234567890!@#$^&*()…æ_+-=;[]/~`";
  c = c[Math.floor(Math.random() * c.length)];
  return (Math.random() > 0.5) ? c : c.toUpperCase();
 }
 
-const ShuffleType = ({ text, classtype }) => {
+const ShuffleType = ({ text, classtype, link }) => {
  const [arr1, setArr1] = useState(text.split(''));
  const [arr2, setArr2] = useState(Array(text.length).fill(''));
  const [color, setColor] = useState('#fff');
@@ -60,7 +66,8 @@ const ShuffleType = ({ text, classtype }) => {
       }
      });
     }, [arr1]);
- return <div >{arr2.join('')}</div>;
+
+ return <TextComponent href={link}target="_blank" rel="noopener noreferrer" >{arr2.join('')}</TextComponent>;
 };
 
 export default ShuffleType;
