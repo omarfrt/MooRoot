@@ -164,22 +164,22 @@ export default function Home() {
       <FooterContainer>
         <FooterColumn>
           <FooterLine />
-          <TextComponent fontSize="16px"><ShuffleType text={"omarfertat.com"}link={"https://www.omarfertat.com/"}/></TextComponent>
+          <TextComponent fontSize="16px"><ShuffleType text={"Other demos 👉🏽"}/></TextComponent>
         </FooterColumn>
         <FooterColumn>
           <FooterLine />
-          <TextComponent fontSize="16px"><ShuffleType text={"Demo"}/></TextComponent>
-          <TextComponent fontSize="16px"><ShuffleType text={"Demo"}/></TextComponent>
+          <TextComponent fontSize="16px"><ShuffleType text={"⚽Rolling Ball Game 👷🏽‍♂️"} link={"https://ball-game-zeta.vercel.app/"}/></TextComponent>
+          <TextComponent fontSize="16px"><ShuffleType text={"🔮Hologram Shader ✅"} link={"https://hologram-shader-flax.vercel.app/"}/></TextComponent>
         </FooterColumn>
         <FooterColumn>
           <FooterLine />
-          <TextComponent fontSize="16px"><ShuffleType text={"Demo"}/></TextComponent>
-          <TextComponent fontSize="16px"><ShuffleType text={"Demo"}/></TextComponent>
+          <TextComponent fontSize="16px"><ShuffleType text={"♾️Morph Shader ✅"} link={"https://morph-shader.vercel.app/"}/></TextComponent>
+          <TextComponent fontSize="16px"><ShuffleType text={"🧑🏽‍💻Decode Effect ✅"} link={"https://decode-effect.vercel.app/"}/></TextComponent>
         </FooterColumn>
         <FooterColumn>
           <FooterLine />
-          <TextComponent fontSize="16px"><ShuffleType text={"Demo"}/></TextComponent>
-          <TextComponent fontSize="16px"><ShuffleType text={"Demo"}/></TextComponent>
+          <TextComponent fontSize="16px"><ShuffleType text={"🌌Galaxy ✅"} link={"https://omarfrt-galaxy.vercel.app/"}/></TextComponent>
+          <TextComponent fontSize="16px"><ShuffleType text={"🍩3D Text ✅"} link={"https://omarfertat3dtext.vercel.app/"}/></TextComponent>
         </FooterColumn>
       </FooterContainer>
     </PageWrapper>
