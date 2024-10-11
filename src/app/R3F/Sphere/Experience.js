@@ -5,7 +5,7 @@ import Sphere from "./Sphere";
 export default function Experience() {
   return (
     <Canvas >
-      <OrbitControls />
+      <OrbitControls enableZoom={false} />
       <Sphere />
     </Canvas>
   );

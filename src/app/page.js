@@ -6,6 +6,7 @@ import studioSvg from "./studio.svg";
 import greenTorusSvg from "./green.svg";
 import orangeTorusSvg from "./orange.svg";
 import Experience from "./R3F/Sphere/Experience";
+import ShuffleType from "./component/TypeShuffle";
 
 const PageWrapper = Styled.div`
   position: relative;
@@ -39,13 +40,19 @@ const GreenTorus = Styled(Image)`
   position: absolute;
   bottom: -120px;
   right: -120px;
-  z-index: 4;
+  z-index: 0;
+  @media (max-width: 1056px){
+    display: none;
+  }
 `;
 const OrangeTorus = Styled(Image)`
   position: absolute;
   top: -120px;
   left: -45px;
-  z-index: 4;
+  z-index: 0;
+  @media (max-width: 1056px){
+    display: none;
+  }
 `;
 //LINE
 const HorizontalLine = Styled.div`
@@ -74,6 +81,7 @@ const TextComponent = Styled.div`
   font-weight: ${props => props.fontWeight || 'medium'};
   font-size: ${props => props.fontSize || '18px'};
   text-align: left;
+  z-index:4
 `;
 
 const FooterContainer = Styled.div`
@@ -110,42 +118,42 @@ export default function Home() {
       <HorizontalLine />
       <ColumnContainer>
         <Column>
-          <TextComponent fontWeight="bold" fontSize="40px">Omar Fertat</TextComponent>
+          <TextComponent fontWeight="bold" fontSize="40px"><ShuffleType text={"Omar Fertat"} link={"https://www.omarfertat.com/"}/></TextComponent>
         </Column>
         <Column>
-          <TextComponent fontWeight="bold">Tangier,</TextComponent>
-          <TextComponent fontWeight="bold">Morocco</TextComponent>
+          <TextComponent fontWeight="bold"><ShuffleType text={"Tangier,"}/></TextComponent>
+          <TextComponent fontWeight="bold"><ShuffleType text={"Morocco"}/></TextComponent>
         </Column>
         <Column >
-          <TextComponent fontWeight="bold">omarfertat.com,</TextComponent>
-          <TextComponent fontWeight="bold">omarfertat96@gmail.com</TextComponent>
+          <TextComponent fontWeight="bold"><ShuffleType text={"omarfertat.com,"} link={"https://www.omarfertat.com/"}/></TextComponent>
+          <TextComponent fontWeight="bold"><ShuffleType text={"omarfertat96@gmail.com"} link={"mailto:omarfertat96@gmail.com"}/></TextComponent>
         </Column>
       </ColumnContainer>
       <HorizontalLine />
       <ColumnContainer>
         <Column>
-          <TextComponent>Full Stack /</TextComponent>
-          <TextComponent>Creative Developer</TextComponent>
+          <TextComponent><ShuffleType text={"Full Stack /"}/></TextComponent>
+          <TextComponent> <ShuffleType text={"Creative Developer"}/></TextComponent>
         </Column>
         <Column>
-          <TextComponent>ReactJs, NextJs,</TextComponent>
-          <TextComponent>R3F</TextComponent>
+          <TextComponent><ShuffleType text={"ReactJs, NextJs,"}/></TextComponent>
+          <TextComponent><ShuffleType text={"R3F"}/></TextComponent>
         </Column>
         <Column>
-          <TextComponent>NodeJs, Express,</TextComponent>
-          <TextComponent>MongoDB</TextComponent>
+          <TextComponent><ShuffleType text={"NodeJs, Express,"}/></TextComponent>
+          <TextComponent><ShuffleType text={"MongoDB"}/></TextComponent>
         </Column>
       </ColumnContainer>
       <HorizontalLine />
       <ColumnContainer>
         <Column>
-          <TextComponent>MexiqueBookShop.com -2022</TextComponent>
+          <TextComponent><ShuffleType text={"MexiqueBookShop.com -2022"} link={"https://www.mexiquebookshop.com/"}/></TextComponent>
         </Column>
         <Column>
-          <TextComponent>Homylius.lu -2023</TextComponent>
+          <TextComponent><ShuffleType text={"Homylius.lu -2023"} link={"https://www.homylius.lu/"}/></TextComponent>
         </Column>
         <Column>
-          <TextComponent>MooRoot.com -?</TextComponent>
+          <TextComponent><ShuffleType text={"MooRoot.studio -?"}link={"https://www.mooroot.studio/"}/></TextComponent>
         </Column>
       </ColumnContainer>
       
@@ -156,22 +164,22 @@ export default function Home() {
       <FooterContainer>
         <FooterColumn>
           <FooterLine />
-          <TextComponent fontSize="16px">omarfertat.com</TextComponent>
+          <TextComponent fontSize="16px"><ShuffleType text={"Other demos 👉🏽"}/></TextComponent>
         </FooterColumn>
         <FooterColumn>
           <FooterLine />
-          <TextComponent fontSize="16px">demo1.com</TextComponent>
-          <TextComponent fontSize="16px">demo2.com</TextComponent>
+          <TextComponent fontSize="16px"><ShuffleType text={"⚽Rolling Ball Game 👷🏽‍♂️"} link={"https://ball-game-zeta.vercel.app/"}/></TextComponent>
+          <TextComponent fontSize="16px"><ShuffleType text={"🔮Hologram Shader ✅"} link={"https://hologram-shader-flax.vercel.app/"}/></TextComponent>
         </FooterColumn>
         <FooterColumn>
           <FooterLine />
-          <TextComponent fontSize="16px">demo1.com</TextComponent>
-          <TextComponent fontSize="16px">demo2.com</TextComponent>
+          <TextComponent fontSize="16px"><ShuffleType text={"♾️Morph Shader ✅"} link={"https://morph-shader.vercel.app/"}/></TextComponent>
+          <TextComponent fontSize="16px"><ShuffleType text={"🧑🏽‍💻Decode Effect ✅"} link={"https://decode-effect.vercel.app/"}/></TextComponent>
         </FooterColumn>
         <FooterColumn>
           <FooterLine />
-          <TextComponent fontSize="16px">demo1.com</TextComponent>
-          <TextComponent fontSize="16px">demo2.com</TextComponent>
+          <TextComponent fontSize="16px"><ShuffleType text={"🌌Galaxy ✅"} link={"https://omarfrt-galaxy.vercel.app/"}/></TextComponent>
+          <TextComponent fontSize="16px"><ShuffleType text={"🍩3D Text ✅"} link={"https://omarfertat3dtext.vercel.app/"}/></TextComponent>
         </FooterColumn>
       </FooterContainer>
     </PageWrapper>
