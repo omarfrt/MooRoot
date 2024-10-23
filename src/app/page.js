@@ -3,8 +3,7 @@ import Image from "next/image";
 import Styled from "styled-components";
 import moorootSvg from "./mooroot.svg";
 import studioSvg from "./studio.svg";
-import greenTorusSvg from "./green.svg";
-import orangeTorusSvg from "./orange.svg";
+import Torus from "./component/Svg/Torus"
 import Experience from "./R3F/Sphere/Experience";
 import ShuffleType from "./component/TypeShuffle";
 
@@ -39,22 +38,28 @@ const MoorootLogo = Styled(Image)`
 const StudioLogo = Styled(Image)`
   
 `;
-const GreenTorus = Styled(Image)`
+const GreenTorus = Styled.div`
   position: absolute;
   bottom: -120px;
   right: -120px;
   z-index: 0;
   @media (max-width: 1056px){
-    display: none;
+    position: absolute;
+  top: 437px;
+  right: -120px;
+  z-index: 0;
   }
 `;
-const OrangeTorus = Styled(Image)`
+const OrangeTorus = Styled.div`
   position: absolute;
   top: -120px;
   left: -45px;
   z-index: 0;
   @media (max-width: 1056px){
-    display: none;
+  position: absolute;
+  top: 437px;
+  left: -128px;
+  z-index: 0;
   }
 `;
 //LINE
@@ -150,20 +155,21 @@ const FooterColumn = Styled.div`
     }
   }
 `;
-// const FooterLine = Styled.div`
-//   width: 301px;
-//   height: 2px;
-//   background-color: black;
-//   margin-bottom: 10px;
-// `;
+const ExperienceContainer = Styled.div`
+  position: relative; // Ensure it can be positioned
+  z-index: 10; // Set a higher z-index for the Experience component
+  width: 100%; 
+  height: 50vh;
+
+`;
 
 
 export default function Home() {
   return (
     <>
       <PageWrapper>
-        {/* <OrangeTorus src={orangeTorusSvg} alt="orange torus" />
-      <GreenTorus src={greenTorusSvg} alt="green torus" /> */}
+      <OrangeTorus> <Torus color="#E4620A"/> </OrangeTorus>
+      <GreenTorus> <Torus color="#51AF95"/> </GreenTorus>
       <MainContent>
       <LogoContainer>
         <MoorootLogo src={moorootSvg} alt="mooroot" />
@@ -214,10 +220,12 @@ export default function Home() {
       </ColumnContainer>
       
       </MainContent>
-      <div style={{ width: '100%', height: '50vh' }}>
+      {/* <div style={{ width: '100%', height: '50vh' }}>
         <Experience />
-      </div>
-       
+      </div> */}
+      <ExperienceContainer>
+        <Experience/>
+        </ExperienceContainer>       
       <FooterContainer >
         <FooterColumn columnStart={1}>
           {/* <FooterLine /> */}
